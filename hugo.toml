@@ -1,13 +1,13 @@
 baseURL = 'https://je1zzz.github.io/github-page-obsidian/'
 locale = 'zh-CN'
 defaultContentLanguage = 'zh'
-title = 'Je1zzz 的笔记'
+title = '🍎zhm notebook🍎'
 theme = 'hugo-bearblog'
 enableRobotsTXT = true
 timeZone = 'Asia/Shanghai'
 
 [params]
-  description = '学习、研究与日常观察。'
+  description = 'Rebuild my broken brain。'
   dateFormat = '2006-01-02'
   enablePostNavigator = true
 
@@ -15,15 +15,15 @@ timeZone = 'Asia/Shanghai'
   tag = 'tags'
 
 [[menus.main]]
-  name = '首页'
+  name = 'Home'
   pageRef = '/'
   weight = 10
 [[menus.main]]
-  name = '文章'
+  name = 'Article'
   pageRef = '/blog'
   weight = 20
 [[menus.main]]
-  name = '标签'
+  name = 'Group'
   pageRef = '/tags'
   weight = 30
 
