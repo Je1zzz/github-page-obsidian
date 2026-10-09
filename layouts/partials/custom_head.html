@@ -7,6 +7,38 @@
   a:focus-visible, button:focus-visible { outline: 2px solid var(--link-color); outline-offset: 4px; }
   @media (max-width: 500px) { ul.blog-posts li { gap: 8px; } ul.blog-posts li span { flex-basis: 100px; } }
 </style>
+{{ if .IsHome }}
+<style>
+  html {
+    min-height: 100%;
+    background: #6494be url('{{ "theme/blue-texture.png" | relURL }}') center / cover fixed;
+    isolation: isolate;
+  }
+  html::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url('{{ "theme/cat-stickers.png" | relURL }}') center / contain no-repeat;
+    opacity: .48;
+    pointer-events: none;
+    z-index: -1;
+  }
+  body {
+    box-sizing: border-box;
+    width: calc(100% - 48px);
+    max-width: 784px;
+    margin: 48px auto;
+    padding: 32px;
+    border-radius: 12px;
+    background: rgba(241, 247, 253, .86);
+  }
+  :root[data-theme="dark"] body { background: rgba(1, 36, 46, .91); }
+  @media (max-width: 600px) {
+    body { width: calc(100% - 24px); margin: 20px auto; padding: 24px 20px; }
+    html { background-attachment: scroll; }
+  }
+</style>
+{{ end }}
 <script>
   (() => {
     let stored;
