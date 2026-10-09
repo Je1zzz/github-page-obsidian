@@ -1,0 +1,34 @@
+baseURL = 'https://je1zzz.github.io/github-page-obsidian/'
+locale = 'zh-CN'
+defaultContentLanguage = 'zh'
+title = 'Je1zzz 的笔记'
+theme = 'hugo-bearblog'
+enableRobotsTXT = true
+timeZone = 'Asia/Shanghai'
+
+[params]
+  description = '学习、研究与日常观察。'
+  dateFormat = '2006-01-02'
+  enablePostNavigator = true
+
+[taxonomies]
+  tag = 'tags'
+
+[[menus.main]]
+  name = '首页'
+  pageRef = '/'
+  weight = 10
+[[menus.main]]
+  name = '文章'
+  pageRef = '/blog'
+  weight = 20
+[[menus.main]]
+  name = '标签'
+  pageRef = '/tags'
+  weight = 30
+
+[markup.goldmark.renderer]
+  unsafe = true
+[markup.highlight]
+  style = 'friendly'
+  lineNos = false

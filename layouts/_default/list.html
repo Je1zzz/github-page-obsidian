@@ -1,0 +1,15 @@
+{{ define "main" }}
+<content>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  {{ if eq .Kind "term" }}<p><a href="{{ "blog/" | relURL }}">全部文章</a></p>{{ end }}
+  <ul class="blog-posts">
+    {{ range .RegularPages.ByDate.Reverse }}
+    <li><span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></span><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ else }}<li>暂时没有文章。</li>{{ end }}
+  </ul>
+  {{ if ne .Kind "term" }}
+  <p>{{ range .Site.Taxonomies.tags }}<a href="{{ .Page.RelPermalink }}">#{{ .Page.Title }}</a>&nbsp;{{ end }}</p>
+  {{ end }}
+</content>
+{{ end }}

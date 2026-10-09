@@ -1,0 +1,11 @@
+{
+  "name": "obsidian-bearblog-publisher",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "export": "node scripts/export-vault.mjs"
+  },
+  "dependencies": {
+    "yaml": "^2.9.1"
+  }
+}

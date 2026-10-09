@@ -1,0 +1,4 @@
+{{ range .Site.Menus.main }}
+<a href="{{ .URL }}">{{ .Name }}</a>
+{{ end }}
+<button id="theme-toggle" type="button" aria-label="切换明暗主题">暗色</button>
